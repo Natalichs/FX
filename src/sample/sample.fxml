@@ -3,6 +3,16 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<VBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="center" >
+    <TextArea fx:id="myTextArea" VBox.vgrow="ALWAYS"/>
+    <HBox>
+        <TextField fx:id="myTextField" onAction="#writeText"/>
+        <Button text="send" onAction="#btnClick"/>
+    </HBox>
+
+</VBox>
